@@ -23,6 +23,7 @@ namespace http{
         int m_new_socket;
         int startServer();
         void closeServer();
+        
     };
 } // namespace http
 
