@@ -10,9 +10,15 @@
 namespace http{
     class TcpServer{
         public: 
-        TcpServer();
+        TcpServer(std::string ip_address, int port);
         ~TcpServer();
         private:
+        std::string m_ip_address;
+        int m_port;
+        long m_incomingMessage;
+        struct sockaddr_in m_socketAddress;
+        unsigned int m_socketAddress_len;
+        std::string m_serverMessage;
         int m_socket;
         int m_new_socket;
         int startServer();
